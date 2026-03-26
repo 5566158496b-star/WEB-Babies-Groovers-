@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babies Groovers | Agencia de Bailarines</title>
+    <style>
+        :root {
+            --bg-dark: #09090b;
+            --bg-card: #141418;
+            --neon-coral: #ff745c;
+            --neon-cyan: #3de1e1;
+            --text-light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at top, #1a1a24 0%, var(--bg-dark) 80%);
+        }
+
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--neon-cyan);
+            box-shadow: 0 4px 15px rgba(61, 225, 225, 0.2);
+        }
+
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 116, 92, 0.4), 0 0 40px rgba(61, 225, 225, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--neon-coral);
+            text-shadow: 0 0 10px rgba(255, 116, 92, 0.8);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+            color: #d1d1d1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--neon-cyan);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+        .section h2 {
+            color: var(--neon-cyan);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(61, 225, 225, 0.5);
+        }
+
+        /* Estilos específicos para el ADN */
+        .adn-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .adn-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .valores-card {
+                grid-column: span 2;
+            }
+        }
+
+        .adn-item {
+            background: #0f0f13;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #2a2a35;
+        }
+
+        .adn-item h3 {
+            color: var(--neon-coral);
+            margin-top: 0;
+            font-size: 1.3rem;
+            border-bottom: 1px solid #2a2a35;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #0f0f13;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #2a2a35;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-coral);
+            box-shadow: 0 5px 15px rgba(255, 116, 92, 0.2);
+        }
+
+        .card h3 {
+            color: var(--neon-coral);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .card ul, .adn-item ul {
+            padding-left: 1.2rem;
+        }
+
+        .card li, .adn-item li {
+            margin-bottom: 0.8rem;
+            color: #c4c4c4;
+        }
+
+        .card strong, .adn-item strong {
+            color: var(--text-light);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-coral);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-top: 25px;
+            border: 2px solid var(--neon-coral);
+            box-shadow: 0 0 10px rgba(255, 116, 92, 0.3) inset, 0 0 15px rgba(255, 116, 92, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: var(--neon-coral);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px rgba(255, 116, 92, 0.8);
+        }
+
+        .footer-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #050506;
+            border-top: 1px solid #222;
+        }
+
+        .footer-cta h2 {
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="74093.png" alt="Babies Groovers Logo">
+        </div>
+        <h1>BABIES GROOVERS</h1>
+        <p>Haz de tu pasión tu negocio. La agencia que transforma el talento en rentabilidad.</p>
+        <a href="#contacto" class="cta-button">Únete a la Agencia</a>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Nuestro ADN</h2>
+            <div class="adn-grid">
+                <div class="adn-item">
+                    <h3>🎯 Misión</h3>
+                    <p>Convertir el talento en carreras 100% rentables y estables. Te damos la estructura corporativa para que vivas de tu pasión sin preocuparte por el negocio.</p>
+                </div>
+                <div class="adn-item">
+                    <h3>👁️ Visión</h3>
+                    <p>Liderar la profesionalización de la industria del baile a nivel nacional, creando la nueva generación de artistas de alto rendimiento y éxito financiero.</p>
+                </div>
+                <div class="adn-item valores-card">
+                    <h3>💎 Valores</h3>
+                    <ul>
+                        <li><strong>Accountability:</strong> Cuentas claras, cero excusas y resultados medibles. Hacemos que las cosas pasen.</li>
+                        <li><strong>Integridad Absoluta:</strong> Transparencia total en cada contrato, pago y negociación.</li>
+                        <li><strong>Crew Mentality:</strong> El éxito individual empuja al grupo. Crecemos juntos.</li>
+                        <li><strong>Bienestar 360:</strong> Cuidamos la salud mental y física de nuestro talento, porque un artista equilibrado es un artista imparable.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>El Ecosistema</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🚀 Crecimiento</h3>
+                    <ul>
+                        <li><strong>Impulso a Intermedios:</strong> Pagamos la mensualidad de tu academia para acelerar tu nivel.</li>
+                        <li><strong>Ingresos Claros:</strong> Llamados a eventos y producciones 100% pagados.</li>
+                        <li><strong>Ganancias Escalables:</strong> Esquema de bonos por desempeño negociable.</li>
+                        <li><strong>Búsqueda Activa:</strong> Desarrollo de nuevas oportunidades y nichos de mercado.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🧠 Negocios</h3>
+                    <ul>
+                        <li><strong>Marketing Estratégico:</strong> Diseño de tu estrategia digital personal y creación de imagen pública.</li>
+                        <li><strong>Ventas para Bailarines:</strong> Capacitación en <em>buyer persona</em> y métodos postventa para vender tu talento.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🧘‍♂️ Bienestar</h3>
+                    <ul>
+                        <li><strong>Apoyo Psicológico:</strong> Atención especializada para mantener tu enfoque y salud mental (incluido).</li>
+                        <li><strong>Comedor:</strong> Servicio de comedor disponible para optimizar tu tiempo y nutrición (costo extra).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-cta" id="contacto">
+        <h2>No busques más audiciones vacías.</h2>
+        <p>Construye una carrera sólida y rentable con un equipo que te respalda.</p>
+        <a href="#" class="cta-button">Aplica ahora</a>
+    </div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+</head>
+<body>
+    
+</body>
+</html>
